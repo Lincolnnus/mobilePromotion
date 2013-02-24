@@ -60,14 +60,13 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
             showSuccess($success_message);
         }
     }
-    function insertPromotion($promotion){
+    function insertNewPromotion($promotion){
         include_once("includes/connection.php");
         $hid = $promotion["hid"];
         $title = $promotion["title"];
         $content = $promotion["content"];
         $startTime = $promotion["startTime"];
         $endTime = $promotion["endTime"];
-        $thumbnail = $promotion["thumbnail"];
         $categoryName = $promotion["categoryName"];
         $maxBook = $promotion["maxBook"];
         $query = sprintf("INSERT INTO `promotion`(
@@ -76,11 +75,9 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
                          content,
                          endTime,
                          startTime,
-                         thumbnail,
                          categoryName,
                          maxBook)
         VALUES (
-                '%s',
                 '%s',
                 '%s',
                 '%s',
@@ -93,7 +90,6 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
         mysql_real_escape_string($content),
         mysql_real_escape_string($startTime),
         mysql_real_escape_string($endTime),
-        mysql_real_escape_string($thumbnail),
         mysql_real_escape_string($categoryName),
         mysql_real_escape_string($maxBook));
         $result = mysql_query($query);
@@ -111,7 +107,6 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
         $content = $promotion["content"];
         $startTime = $promotion["startTime"];
         $endTime = $promotion["endTime"];
-        $thumbnail = $promotion["thumbnail"];
         $categoryName = $promotion["categoryName"];
         $maxBook = $promotion["maxBook"];
         $query = sprintf("UPDATE promotion SET
@@ -119,7 +114,6 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
                          content = '%s',
                          startTime = '%s',
                          endTime = '%s',
-                         thumbnail = '%s',
                          categoryName = '%s',
                          maxBook = '%s'
                          WHERE hid = '%s' AND pid = '%s'",
@@ -127,7 +121,6 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
                          mysql_real_escape_string($content),
                          mysql_real_escape_string($startTime),
                          mysql_real_escape_string($endTime),
-                         mysql_real_escape_string($thumbnail),
                          mysql_real_escape_string($categoryName),
                          mysql_real_escape_string($maxBook),
                          mysql_real_escape_string($hid),
