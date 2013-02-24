@@ -76,6 +76,7 @@
 		9C309BC616DA7019008ECF3A /* HPPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C309BC516DA7019008ECF3A /* HPPromotion.m */; };
 		9C309BCA16DA7031008ECF3A /* HPPromotionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C309BC816DA7031008ECF3A /* HPPromotionTableViewCell.m */; };
 		9C309BCB16DA7031008ECF3A /* HPPromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C309BC916DA7031008ECF3A /* HPPromotionTableViewCell.xib */; };
+		CF1C94BF16DA939E0036B9A7 /* HPBooking.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C94BE16DA939E0036B9A7 /* HPBooking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,8 @@
 		9C309BC716DA7031008ECF3A /* HPPromotionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPPromotionTableViewCell.h; sourceTree = "<group>"; };
 		9C309BC816DA7031008ECF3A /* HPPromotionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPPromotionTableViewCell.m; sourceTree = "<group>"; };
 		9C309BC916DA7031008ECF3A /* HPPromotionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPPromotionTableViewCell.xib; sourceTree = "<group>"; };
+		CF1C94BD16DA939E0036B9A7 /* HPBooking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPBooking.h; sourceTree = "<group>"; };
+		CF1C94BE16DA939E0036B9A7 /* HPBooking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPBooking.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +319,8 @@
 				9C309A3116D9FDD7008ECF3A /* HPUser.h */,
 				9C309A3216D9FDD7008ECF3A /* HPUser.m */,
 				9C309A3316D9FDD7008ECF3A /* Superclass */,
+				CF1C94BD16DA939E0036B9A7 /* HPBooking.h */,
+				CF1C94BE16DA939E0036B9A7 /* HPBooking.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				9C309BC316DA6FCA008ECF3A /* HPPromotionDetailViewController.m in Sources */,
 				9C309BC616DA7019008ECF3A /* HPPromotion.m in Sources */,
 				9C309BCA16DA7031008ECF3A /* HPPromotionTableViewCell.m in Sources */,
+				CF1C94BF16DA939E0036B9A7 /* HPBooking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

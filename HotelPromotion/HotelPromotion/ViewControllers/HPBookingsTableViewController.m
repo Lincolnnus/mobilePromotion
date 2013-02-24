@@ -8,7 +8,9 @@
 
 #import "HPBookingsTableViewController.h"
 
-@interface HPBookingsTableViewController ()
+@interface HPBookingsTableViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *bookings;
 @end
 
 @implementation HPBookingsTableViewController
@@ -27,7 +29,26 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.tabBarItem setTitle:@"My Bookings"];
+    [[HPCredentialsManager sharedInstance] updateBookings];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshTableView) name:@"updateBookingsSucceed" object:nil];
+
 }
+
+- (void)setupTableView {
+    CGRect tableViewFrame = CGRectMake(0, 0, self.view.size.width, self.view.size.height);
+    UITableView *tv = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
+    self.tableView = tv;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.view addSubview:self.tableView];
+}
+
+- (void)refreshTableView {
+    self.bookings = [[HPCredentialsManager sharedInstance] bookings];
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -45,7 +45,7 @@
 #import "BaseModel.h"
 #import "HPUser.h"
 #import "HPPromotion.h"
-
+#import "HPBooking.h"
 //Views
 #import "BaseTableViewCell.h"
 
