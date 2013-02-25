@@ -68,7 +68,7 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
             showSuccess($success_message);
         }
     }
-    function insertBooking($booking){
+    function insertNewBooking($booking){
         include_once("includes/connection.php");
         $hid = $booking["hid"];
         $pid = $booking["pid"];
