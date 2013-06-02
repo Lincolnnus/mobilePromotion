@@ -76,7 +76,7 @@ define('SERVER_URL', 'http://54.251.118.233/hotels');
         $status = $booking["status"];
         $startDate = $booking["startDate"];
         $endDate= $booking["endDate"];
-        $confirmationNum= md5(time());
+        $confirmationNum= uniqid(mt_rand(), true);
         $query = sprintf("INSERT INTO `booking`(
                          hid,
                          pid,
